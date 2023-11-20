@@ -7,7 +7,7 @@ export default function Home() {
   const navigate = useNavigate()
   const {currentUser} = useSelector((state)=>state.user);
   useEffect(()=>{
-   if(!currentUser){
+   if(!currentUser.success){
     navigate('/sign-in')
    }
   },[])
